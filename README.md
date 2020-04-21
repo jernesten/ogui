@@ -3,7 +3,7 @@ Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21
 
 CC-BY-NC-SA - License
 
-After days of confinement caused by the appearance of the "damn virus". I have decided to spend my time learning to program in python. A way to get something good out of the situation, and to maintain sanity despite being locked up for so long.
+After days of confinement caused by the appearance of the "damn virus", I have decided to spend my time learning to program in python as a way to get something positive out of the situation, and to maintain sanity despite being locked up for so long.
 It is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
 https://github.com/astrada/google-drive-ocamlfuse
 
@@ -46,6 +46,15 @@ For other installation options, please refer to his [wiki](https://github.com/as
 ```
 git clone https://github.com/jernesten/ogui.git
 ```
+#### Instructions
+
+**Buttons:**
+![Mount](https://github.com/jernesten/ogui/blob/master/images/mount.png) --> Mounts the Drive
+![Unmount](https://github.com/jernesten/ogui/blob/master/images/unmount.png) --> Unmounts the Drive
+![Edit](https://github.com/jernesten/ogui/blob/master/images/edit.png) --> Edit the Drive account
+![Delete](https://github.com/jernesten/ogui/blob/master/images/delete.png) --> Delete the Drive account
+
+**So:**
 - Start OGUI
 - Add a new google drive account
 - Mount it
