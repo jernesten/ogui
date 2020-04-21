@@ -26,13 +26,18 @@ sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
 sudo apt-get install google-drive-ocamlfuse
 ```
+Depending on your Linux distribution you may need to run before
+```
+sudo apt-get install software-properties-common
+sudo apt-get install python3-software-properties
+```
 
 ### For other systems or other installation options
 
-For installing inother systems, please go to [!Astrada's ocamlfuse github(https://github.com/astrada/google-drive-ocamlfuse)] and follow instructions
+For installing inother systems, please go to [Astrada's ocamlfuse github](https://github.com/astrada/google-drive-ocamlfuse) and follow instructions
 
 
-For other installation options, please refer to his [!wiki(https://github.com/astrada/google-drive-ocamlfuse/wiki/Installation)].
+For other installation options, please refer to his [wiki](https://github.com/astrada/google-drive-ocamlfuse/wiki/Installation).
 
 ## Clone or download OGUI
 
