@@ -11,14 +11,14 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
 
 ![ogui sample](https://github.com/jernesten/ogui/blob/master/images/ogui-sample.png "OGUI Image Sample")
 
-# How to use OGUI
+## How to use OGUI
 
  Ogui is just a GUI for ocamlfuse.
  So in order to be able tou mount your google drive account you need to install first the Astrada's program.
  
-## Install ocamlfuse by Astrada in your Linux system
+### Install ocamlfuse by Astrada in your Linux system
 
-### Ubuntu systems and derivates 
+#### Ubuntu systems and derivates 
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
 ```
@@ -32,14 +32,14 @@ sudo apt-get install software-properties-common
 sudo apt-get install python3-software-properties
 ```
 
-### For other systems or other installation options
+#### For other systems or other installation options
 
 For installing inother systems, please go to [Astrada's ocamlfuse github](https://github.com/astrada/google-drive-ocamlfuse) and follow instructions
 
 
 For other installation options, please refer to his [wiki](https://github.com/astrada/google-drive-ocamlfuse/wiki/Installation).
 
-## Clone or download OGUI
+### Clone or download OGUI
 
 ```
 git clone https://github.com/jernesten/ogui.git
@@ -49,7 +49,7 @@ git clone https://github.com/jernesten/ogui.git
 - Mount it
 - Look for it in your file manager
 
-# Acknowledgments
+## Acknowledgments
 
 Thank you very much to my friends Úrsula and Jorge without whom I would probably still be stuck at some point in development.
 	
