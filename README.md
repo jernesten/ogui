@@ -48,3 +48,9 @@ git clone https://github.com/jernesten/ogui.git
 - Add a new google drive account
 - Mount it
 - Look for it in your file manager
+
+# Acknowledgments
+
+Thank you very much to my friends Úrsula and Jorge without whom I would probably still be stuck at some point in development.
+	
+
