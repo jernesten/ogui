@@ -1,0 +1,278 @@
+#!/usr/bin/env python3
+import tkinter as tk
+from tkinter import Menu, messagebox, PhotoImage, Entry, Frame, Label, Button, Toplevel
+from functools import partial
+import json, os, re
+
+root = tk.Tk()
+root.title("GDrive - Ocamlfuse GUI Manager")
+root.resizable(False, True)
+root.option_add("*Dialog.msg.font","Monospace 10")
+
+#colorsVars
+color1 = "#222"
+color2 = "#333"
+color3 = "#888"
+color4 = "#999"
+color5 = "#eee"
+color6 = "#fff"
+
+#infoVars
+appname  = "OGUI Manager"
+longname = "Ocamlfuse-Google-Drive GUI Manager"
+version  = "version 1.3.20"
+author   = "https://github.com/jernesten"
+web      = "https://github.com/jernesten/OGUI"
+
+allhelp="\n"+ longname +" \n\n"+ version +" \n\n"+ author +" \n\n"+ web +" \n"
+
+#functions
+def cargarApp():
+    for tItem in accountsframe.winfo_children():
+        tItem.destroy()
+
+    accountsframe.pack(side="top")
+
+def helpInfo():
+    messagebox.showinfo(""+ appname +"",""+ allhelp +"",)
+
+def exitApp():
+    value = messagebox.askquestion("Exit","Do you want to exit OGUI Manager?")
+    if value=="yes":
+        root.destroy()
+
+def fakeId():
+    itemID="fk-id"
+    openForm(itemID)
+
+def openForm(itemID):
+    def exitForm():
+        formulario.destroy()
+
+    if itemID=="fk-id":
+        explain = "Fill this form in order to create a new Google Drive\naccount to manage with Ocamlfuse GUI"
+        emailLabl = "Gmail address *:"
+        pathLabl = "Mountpoint *:"
+        error1 = "Empty or wrong email entry. \n\nPlease verify your entry "
+        error2 = "Empty, wrong or not existent path entry. \n\nPlease verify your entry "
+
+    else:
+        explain = "You're editing the selected Account,\n if the field is left blank, the value will not be updated."
+        emailLabl = "Gmail address:"
+        pathLabl = "Mountpoint:"
+        error1 = "Wrong email entry. \n\nPlease verify your entry "
+        error2 = "Wrong or not existent path entry. \n\nPlease verify your entry "
+
+    def errorValidate1():
+        messagebox.showwarning("Warning!", str(error1))
+        formulario.destroy()
+
+    def errorValidate2():
+        messagebox.showwarning("Warning!", str(error2))
+        formulario.destroy()
+
+    def manageData():
+        e1 = form1.get()
+        e2 = form2.get()
+
+        def validateEmail():
+            regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+            
+            if(re.search(regex,e1)):  
+                validatePath()
+            elif e1=="":
+                if itemID=="fk-id":
+                    errorValidate1()
+                else:
+                    validatePath()
+            else:
+                errorValidate1()
+
+        def validatePath():
+            if(os.path.exists(e2)):  
+                addValidated()
+            elif e2=="":
+                if itemID=="fk-id":
+                    errorValidate2()
+                else:
+                    validatePath()
+            else:  
+                errorValidate2()
+
+        def addValidated():
+            with open("json/accounts.json") as jsonfile:
+                data = json.load(jsonfile)
+
+            #aquí tiene que ir un if
+            if itemID=="fk-id":
+                listdata=data["accounts"] #make accounts a list to be able to append
+                listdata.append({'name': str(e1), 'mountpoint':  str(e2)})
+            
+                with open("json/accounts.json","w") as jsonfile:
+                    data = json.dump(data, jsonfile, indent=4)
+            else:            
+                oldName=data["accounts"][int(itemID)]["name"]
+                oldMountpoint=data["accounts"][int(itemID)]["mountpoint"]
+
+                newName=e1
+                newMountpoint=e2
+            
+                if newName=="":
+                    newName=oldName
+
+                if newMountpoint=="":
+                    newMountpoint=oldMountpoint
+
+                data["accounts"][int(itemID)]["name"]=newName
+                data["accounts"][int(itemID)]["mountpoint"]=newMountpoint
+                
+                with open("json/accounts.json","w") as jsonfile:
+                    data = json.dump(data, jsonfile, indent=4)
+
+            formulario.destroy()
+            loadData()        
+
+        validateEmail()
+
+    formulario = Toplevel(root)
+    formulario.resizable(False,False)
+
+    explainLabel = Label(formulario,text=str(explain))
+    explainLabel.grid(row=0, column=0, columnspan=2, pady=20)
+
+    gmailLabel = Label(formulario,text=str(emailLabl))
+    gmailLabel.grid(row=1, column=0, sticky="w", padx=20)
+
+    exgmailLabel = Label(formulario, text="ex:user@gmail.com", fg=color4)
+    exgmailLabel.grid(row=2, column=1, sticky="w", padx=20, pady=5)
+    
+    mountPointLabel = Label(formulario, text=str(pathLabl))
+    mountPointLabel.grid(row=3, column=0, sticky="w", padx=20)
+
+    exmountPointLabel = Label(formulario, text="ex:/home/user/GDrives/GDrive1\nPath must exist", fg=color4)
+    exmountPointLabel.grid(row=4, column=1, sticky="w", padx=20, pady=5)
+
+    form1 = Entry(formulario, width=40)
+    form1.grid(row=1, column=1, sticky="w", padx=20)
+
+    form2  =Entry(formulario, width=40)
+    form2.grid(row=3, column=1, sticky="w", padx=20)
+   
+    cancelButton = Button(formulario,text="Cancel", command=exitForm)
+    cancelButton.grid(row=5,column=1, pady=20, padx=120, sticky="e")
+
+    sendButton = Button(formulario,text="Accept", command=manageData)
+    sendButton.grid(row=5,column=1, pady=20, padx=20, sticky="e")
+
+def loadData():
+    cargarApp()
+
+    with open("json/accounts.json") as jsonfile:
+        data = json.load(jsonfile)
+
+    for account in data["accounts"]:
+        nombre = account["name"]
+        montaje = account["mountpoint"]
+        itemID = data["accounts"].index(account)
+    
+        #Account Items
+        accountitem = Frame(accountsframe)
+        accountitem.config(height=70,width=500, bg=color5, bd=2,relief="groove")
+        accountitem.pack(side="top")
+
+        accountname = Label(accountitem,text=nombre, font=("",12), bg=color5)
+        accountname.place(x="30",y="10")
+
+        accountmtpoint = Label(accountitem,text=montaje, font=("",10), bg=color5)
+        accountmtpoint.place(x="30",y="30")
+
+        #actionButtons
+        accountmount = Button(accountitem, command=partial(mountAction, nombre, montaje))
+        accountmount.config(image=iconmount, padx=10, pady=5,bg=color5, width="20",height="20")
+        accountmount.place(x="360",y="20")
+
+        accountunmount = Button(accountitem, command=partial(unmountAction, montaje))
+        accountunmount.config(image=iconunmount, padx=10, pady=5, bg=color5, width="20",height="20")
+        accountunmount.place(x="390",y="20")
+
+        accountedit = Button(accountitem, command= partial(openForm, itemID))
+        accountedit.config(image=iconedit, padx=10, pady=5, bg=color5, width="20",height="20")
+        accountedit.place(x="420",y="20")
+
+        accountdelete = Button(accountitem, command=partial(borrarAction, itemID))
+        accountdelete.config(image=icondelete, padx=10, pady=5, bg=color5, width="20",height="20")
+        accountdelete.place(x="450",y="20")
+        
+#actionButtons functions
+def mountAction(nombre, montaje):
+    #os.system("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
+    print("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
+
+def unmountAction(montaje):
+    #os.system("fusermount -u " + montaje + "")
+    print("fusermount -u " + montaje + "")
+
+def borrarAction(itemID):
+    with open("json/accounts.json") as jsonfile:
+        data = json.load(jsonfile)
+    
+    value = messagebox.askquestion("Warning! - Deleting Account","You're about to delete the selected account.\n\nAre you sure you want to do it?")
+    if value =="yes":
+        del(data["accounts"][int(itemID)])
+        with open("json/accounts.json","w") as jsonfile:
+            data = json.dump(data, jsonfile, indent=4)            
+    loadData()
+
+### -----DRAW THE INTERFACE FRAME----- ###
+#Add window icon)
+icon = PhotoImage(file="images/ogui.png")
+root.tk.call("wm", "iconphoto", root._w, icon)
+
+#Add menu bar
+menubar = Menu(root, font=("default",9), bd=0)
+root.config(menu=menubar)
+
+#Menu options
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="Add new GDrive account", command=partial (fakeId))
+filemenu.add_separator()
+filemenu.add_command(label="Exit", command=exitApp)
+
+helpmenu = Menu(menubar, tearoff=0)
+helpmenu.add_command(label="About OGUI Manager", command=helpInfo)
+
+menubar.add_cascade(label="File", menu=filemenu)
+menubar.add_cascade(label="Help", menu=helpmenu)
+
+#Add Frame
+miframe = Frame(root)
+miframe.config(height=380,width=500, bd=2, relief="sunken")
+miframe.pack(fill="y", expand="True")
+
+#Add Ban
+miban = Frame(miframe)
+miban.config(height=50,width=500, bg=color4)
+miban.pack(side="top")
+
+#Add new account button
+addnew = Button(miban, text="+ New", padx=5, pady=5, bd=0, fg=color6, bg=color4, command=partial(fakeId))
+addnew.place(x=5, y=7)
+
+#Add explanation text
+instructions = Label(miban, text="Add a new Google Drive account, mount it\nand look for it in your File Browser")
+instructions.config(font=("", 9), bg=color4, fg=color1)
+instructions.place(x=100, y=5, width="350")
+
+#frame para accountitems
+accountsframe=Frame(miframe)
+
+#ICONS
+iconmount   = PhotoImage(file = "images/mount.png")
+iconunmount = PhotoImage(file = "images/unmount.png")
+iconedit    = PhotoImage(file = "images/edit.png")
+icondelete  = PhotoImage(file = "images/delete.png")
+### \\-----DRAW THE INTERFACE FRAME----- ###
+
+loadData()
+
+root.mainloop()

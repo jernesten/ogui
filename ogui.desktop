@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name[Es_es]=ogui
+Exec=/home/jernst/PythonProjects/OGUI/py/ogui
+Path=/home/jernst/PythonProjects/OGUI/
+Terminal=false
+Icon=/home/jernst/PythonProjects/OGUI/images/ogui.png
+Type=Application
+Name[es_ES]=ogui
