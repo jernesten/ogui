@@ -20,7 +20,7 @@ color6 = "#fff"
 #infoVars
 appname  = "OGUI Manager"
 longname = "Ocamlfuse-Google-Drive GUI Manager"
-version  = "version 1.3.20"
+version  = "version 1.4.213"
 author   = "https://github.com/jernesten"
 web      = "https://github.com/jernesten/OGUI"
 
