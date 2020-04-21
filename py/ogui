@@ -103,7 +103,6 @@ def openForm(itemID):
             with open("json/accounts.json") as jsonfile:
                 data = json.load(jsonfile)
 
-            #aquí tiene que ir un if
             if itemID=="fk-id":
                 listdata=data["accounts"] #make accounts a list to be able to append
                 listdata.append({'name': str(e1), 'mountpoint':  str(e2)})
@@ -205,12 +204,10 @@ def loadData():
         
 #actionButtons functions
 def mountAction(nombre, montaje):
-    #os.system("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
-    print("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
+    os.system("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
 
 def unmountAction(montaje):
-    #os.system("fusermount -u " + montaje + "")
-    print("fusermount -u " + montaje + "")
+    os.system("fusermount -u " + montaje + "")
 
 def borrarAction(itemID):
     with open("json/accounts.json") as jsonfile:
