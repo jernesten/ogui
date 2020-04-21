@@ -1,6 +1,6 @@
 # ogui - Google Drive Ocalmfuse Graphical User Interface
-v. 1.4.21 Beta
-Linux Graphical user interface for GDrive ocamlfuse build in python3 - CC-BY-NC-SA - License
+Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta
+CC-BY-NC-SA - License
 
 After days of confinement caused by the appearance of the "damn virus". I have decided to spend my time learning to program in python. A way to get something good out of the situation, and to maintain sanity despite being locked up for so long.
 It is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
