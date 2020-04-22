@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=$HOME/ogui/py/ogui
-Path=$HOME/ogui
-Terminal=false
-Icon=$HOME/ogui/images/ogui.png
-Type=Application
-Name[es_ES]=ogui
