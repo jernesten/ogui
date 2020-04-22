@@ -4,7 +4,7 @@ Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21
 CC-BY-NC-SA - License
 
 -----
-**___state__:The application works but only after modifying some paths and installing some dependencies.
+**STATE:The application works but only after modifying some paths and installing some dependencies.
 Still under development for it to work "out of the box"**
 -----
 
