@@ -30,6 +30,9 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
 ##### The easy way
 
 - Clone or download https://github.com/jernesten/ogui-installer
+```
+git clone https://github.com/jernesten/ogui-installer
+```
 - extract if needed (if you've download a zip)
 - go to the directory
 - execute script ('chmod +x ogui-installer' may be needed)
