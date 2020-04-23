@@ -56,7 +56,7 @@ sudo apt-get install python3-software-properties
 Clone or download https://github.com/jernesten/ogui
 ```
 cd ~/
-git clone https://github.com/jernesten/ogui-installer
+git clone https://github.com/jernesten/ogui
 ```
 Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
 ```
