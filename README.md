@@ -25,7 +25,26 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
  
 ### Install ocamlfuse by Astrada in your Linux system
 
-#### Ubuntu systems and derivates 
+#### Debian, Ubuntu systems and derivates
+
+##### The easy way
+
+- Clone or download https://github.com/jernesten/ogui-installer
+- extract if needed (if you've download a zip)
+- go to the directory
+- execute script ('chmod +x ogui-installer' may be needed)
+```
+sh ogui-installer
+```
+-choose your option in the menu
+```
+1. Only install OGUI, GDrive Ocamlfuse is already installed
+2. Install both OGUI and GDrive Ocamlfuse
+3. Uninstall OGUI
+4. Uninstall both OGUI and GDrive Ocamlfuse (It will also remove PPA)
+5. Exit            
+```
+##### The hard way
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
 ```
