@@ -3,11 +3,6 @@ Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21
 
 CC-BY-NC-SA - License
 
------
-**STATE:The application works but only after modifying some paths and installing some dependencies.
-Still under development for it to work "out of the box"**
------
-
 After days of confinement caused by the appearance of the "damn virus", I have decided to spend my time learning to program in python as a way to get something positive out of the situation, and to maintain my sanity despite being locked up for so long.
 It is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
 https://github.com/astrada/google-drive-ocamlfuse
@@ -18,16 +13,14 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
 
 ![ogui sample](https://github.com/jernesten/ogui/blob/master/images/ogui-sample.png "OGUI Image Sample")
 
-## How to use OGUI
+## Installation
 
  Ogui is just a GUI for ocamlfuse.
  So in order to be able tou mount your google drive account you need to install first the Astrada's program.
  
-### Install ocamlfuse by Astrada in your Linux system
+### Debian, Ubuntu systems and derivates
 
-#### Debian, Ubuntu systems and derivates
-
-##### The easy way
+#### The easy way
 
 - Clone or download https://github.com/jernesten/ogui-installer
 ```
@@ -47,7 +40,7 @@ sh ogui-installer
 4. Uninstall both OGUI and GDrive Ocamlfuse (It will also remove PPA)
 5. Exit            
 ```
-##### The hard way
+#### The hard way
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
 ```
@@ -122,7 +115,7 @@ Path=/home/yourusername/.local/share/ogui
 Terminal=false
 ```
 
-### Instructions
+## Instructions - How to use
 
 **Buttons:**
 
