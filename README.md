@@ -20,7 +20,7 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
  
 ### Debian, Ubuntu systems and derivates
 
-#### The easy way
+#### The easy way (recommended method)
 
 - Clone or download https://github.com/jernesten/ogui-installer
 ```
