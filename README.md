@@ -119,6 +119,7 @@ Terminal=false
 
 **Buttons:**
 
+- "New:" --> Add a new google drive account
 - ![Mount](https://github.com/jernesten/ogui/blob/master/images/mount.png) --> Mounts the Drive
 - ![Unmount](https://github.com/jernesten/ogui/blob/master/images/unmount.png) --> Unmounts the Drive
 - ![Edit](https://github.com/jernesten/ogui/blob/master/images/edit.png) --> Edit the Drive account
