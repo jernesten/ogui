@@ -60,20 +60,69 @@ Depending on your Linux distribution you may need to run before
 sudo apt-get install software-properties-common
 sudo apt-get install python3-software-properties
 ```
+Clone or download https://github.com/jernesten/ogui
+```
+cd ~/
+git clone https://github.com/jernesten/ogui-installer
+```
+Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
+```
+cp -R ~/ogui ~/.local/share
+```
+Create ogui.desktpo in cp -R ~/ogui ~/.local/share/applications to enable the option in the menu
+```
+touch  ~/ogui/ogui.desktop
+```
+Write this inside ~/ogui/ogui.desktop: (change "yourusername" by your actual user name)
+```
+[Desktop Entry]
+Type=Application
+Icon=/home/yourusername/.local/share/ogui/images/ogui.png
+Name=ogui
+GenericName=ogui
+Comment=GUI for gdrive ocamlfuse
+Categories=Network;
+Exec=/home/yourusername/.local/share/ogui/py/ogui
+Path=/home/yourusername/.local/share/ogui
+Terminal=false
+```
 
-#### For other systems or other installation options
+### For other systems or other installation options
 
+#### Installing gdrive-ocalmfuse
 For installing inother systems, please go to [Astrada's ocamlfuse github](https://github.com/astrada/google-drive-ocamlfuse) and follow instructions
-
 
 For other installation options, please refer to his [wiki](https://github.com/astrada/google-drive-ocamlfuse/wiki/Installation).
 
-### Clone or download OGUI
+#### Installing OGUI
 
+Clone or download OGUI
 ```
 git clone https://github.com/jernesten/ogui.git
 ```
-#### Instructions
+Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
+```
+cp -R ~/ogui ~/.local/share
+```
+Create ogui.desktpo in cp -R ~/ogui ~/.local/share/applications to enable the option in the menu
+```
+touch  ~/ogui/ogui.desktop
+```
+Write this inside ~/ogui/ogui.desktop: (change "yourusername" by your actual user name)
+```
+[Desktop Entry]
+Type=Application
+Icon=/home/yourusername/.local/share/ogui/images/ogui.png
+Name=ogui
+GenericName=ogui
+Comment=GUI for gdrive ocamlfuse
+Categories=Network;
+Exec=/home/yourusername/.local/share/ogui/py/ogui
+Path=/home/yourusername/.local/share/ogui
+Terminal=false
+```
+
+### Instructions
 
 **Buttons:**
 
