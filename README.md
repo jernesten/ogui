@@ -5,8 +5,7 @@ Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21
 
 ----
 
-After days of confinement caused by the appearance of the "damn virus", I have decided to spend my time learning to program in python as a way to get something positive out of the situation, and to maintain my sanity despite being locked up for so long.
-It is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
+OGUI is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
 https://github.com/astrada/google-drive-ocamlfuse
 
 The application allows you to manage more than one google drive account, according to the parameters defined for the ocamlfuse program.
