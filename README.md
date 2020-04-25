@@ -62,6 +62,7 @@ git clone https://github.com/jernesten/ogui
 ```
 Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
 ```
+chmod +x ~/ogui/py/ogui
 cp -R ~/ogui ~/.local/share
 ```
 Create ogui.desktpo in cp -R ~/ogui ~/.local/share/applications to enable the option in the menu
@@ -81,8 +82,9 @@ Exec=/home/yourusername/.local/share/ogui/py/ogui
 Path=/home/yourusername/.local/share/ogui
 Terminal=false
 ```
-Move or copy de desktop file into ~/.local/share/applications directory to have the ogui option in your applications menu (not recommended for openbox desktops)
+Move or copy de desktop file into ~/.local/share/applications directory to have the ogui option in your applications menu (this action is useless for openbox menu)
 ```
+chmod +x ~/ogui/ogui.desktop
 cp ~/ogui/ogui.desktop ~/.local/share/applications/ogui.desktop
 ```
 
