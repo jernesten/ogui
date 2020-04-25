@@ -1,4 +1,5 @@
-# ogui - Google Drive Ocalmfuse Graphical User Interface
+
+Depending on your Linux distribution you may need to run before# ogui - Google Drive Ocalmfuse Graphical User Interface
 Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta.
 
 **CC-BY-NC-SA - License**
@@ -95,7 +96,8 @@ For other installation options, please refer to his [wiki](https://github.com/as
 
 #### Installing OGUI
 
-The same as for Debian/Ubuntu systems... I guess...
+The same as for Debian/Ubuntu systems.
+Even the script should be useful.
 
 ## Instructions - How to use
 
