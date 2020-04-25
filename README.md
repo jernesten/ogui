@@ -100,7 +100,7 @@ For other installation options, please refer to his [wiki](https://github.com/as
 The same as for Debian/Ubuntu systems.
 Even the script should be useful.
 
-## Instructions - How to use
+## How to use
 
 **Buttons:**
 
