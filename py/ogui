@@ -5,7 +5,7 @@ from functools import partial
 import json, os, re
 
 root = tk.Tk()
-root.title("GDrive - Ocamlfuse GUI Manager")
+root.title("OGUI")
 root.resizable(False, True)
 root.option_add("*Dialog.msg.font","Monospace 10")
 
