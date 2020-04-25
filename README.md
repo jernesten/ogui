@@ -41,7 +41,7 @@ sh ogui-installer
 4. Uninstall both OGUI and GDrive Ocamlfuse (It will also remove PPA)
 5. Exit            
 ```
-#### The hard way
+#### The less easy way
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
 ```
@@ -57,6 +57,7 @@ sudo apt-get install python3-software-properties
 Clone or download https://github.com/jernesten/ogui
 ```
 cd ~/
+sudo apt-get install git python3 python3-tk
 git clone https://github.com/jernesten/ogui
 ```
 Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
@@ -94,31 +95,7 @@ For other installation options, please refer to his [wiki](https://github.com/as
 
 #### Installing OGUI
 
-Clone or download OGUI
-```
-git clone https://github.com/jernesten/ogui.git
-```
-Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
-```
-cp -R ~/ogui ~/.local/share
-```
-Create ogui.desktpo in cp -R ~/ogui ~/.local/share/applications to enable the option in the menu
-```
-touch  ~/ogui/ogui.desktop
-```
-Write this inside ~/ogui/ogui.desktop: (change "yourusername" by your actual user name)
-```
-[Desktop Entry]
-Type=Application
-Icon=/home/yourusername/.local/share/ogui/images/ogui.png
-Name=ogui
-GenericName=ogui
-Comment=GUI for gdrive ocamlfuse
-Categories=Network;
-Exec=/home/yourusername/.local/share/ogui/py/ogui
-Path=/home/yourusername/.local/share/ogui
-Terminal=false
-```
+The same as for Debian/Ubuntu systems... I guess...
 
 ## Instructions - How to use
 
