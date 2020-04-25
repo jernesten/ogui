@@ -53,7 +53,6 @@ sudo apt-get install google-drive-ocamlfuse
 Depending on your Linux distribution you may need to run before
 ```
 sudo apt-get install software-properties-common
-sudo apt-get install python3-software-properties
 ```
 Clone or download https://github.com/jernesten/ogui
 ```
