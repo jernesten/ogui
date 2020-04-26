@@ -24,7 +24,7 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
 
 #### The easy way
 
-- Clone or download https://github.com/jernesten/ogui-installer
+- Clone or [download](https://github.com/jernesten/ogui-installer/archive/master.zip)
 ```
 git clone https://github.com/jernesten/ogui-installer
 ```
@@ -35,14 +35,8 @@ git clone https://github.com/jernesten/ogui-installer
 chmod +x ogui-installer
 sh ogui-installer
 ```
-- choose your option in the menu
-```
-1. Only install OGUI, GDrive Ocamlfuse is already installed
-2. Install both OGUI and GDrive Ocamlfuse
-3. Uninstall OGUI
-4. Uninstall both OGUI and GDrive Ocamlfuse (It will also remove PPA)
-5. Exit            
-```
+[More information.](https://github.com/jernesten/ogui-installer)
+
 #### The less easy way
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
