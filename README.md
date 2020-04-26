@@ -4,9 +4,8 @@
 </p>
 
 <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta.</p>
-<hr />
-
-**CC-BY-NC-SA - License**
+<br />
+<span align="right" ><b>CC-BY-NC-SA - License</b></span>
 
 ----
 
