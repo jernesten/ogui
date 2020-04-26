@@ -94,7 +94,7 @@ cp ~/ogui/ogui.desktop ~/.local/share/applications/ogui.desktop
 
 ### :pushpin: For other systems or other installation options
 
-#### :small_blue_diamond: Installing gdrive-ocalmfuse
+#### :small_blue_diamond: Installing gdrive-ocamlfuse
 For installing in other systems, please go to [Astrada's ocamlfuse github](https://github.com/astrada/google-drive-ocamlfuse) and follow instructions
 
 For other installation options, please refer to his [wiki](https://github.com/astrada/google-drive-ocamlfuse/wiki/Installation).
