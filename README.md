@@ -2,9 +2,9 @@
         <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" align="left">
         <h1 align="right" style="padding-top:-25px">OGUI - GDrive Ocalmfuse GUI</h1>        
 </p>
-  
 
 <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta.</p>
+<hr />
 
 **CC-BY-NC-SA - License**
 
