@@ -4,12 +4,12 @@
 </p>
 <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br /><b>CC-BY-NC-SA - License</b></p>
 <br />
-<table class="tg">
-  <tr width=100%>
+<table class="tg" width=100%>
+  <tr>
     <th class="tg-0lax"><img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png"></th>
     <th align="right" class="tg-0lax">
                 <h1>OGUI - GDrive Ocalmfuse GUI</h1>
-                <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br /><b>CC-BY-NC-SA - License</b></p>
+                <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br><b>CC-BY-NC-SA - License</b></p>
           </th>
   </tr>
 </table>
