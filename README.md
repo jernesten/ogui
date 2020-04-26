@@ -1,16 +1,10 @@
-<p>
-        <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" align="left">
-        <h1 align="right">OGUI - GDrive Ocalmfuse GUI</h1>        
-</p>
-<p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br /><b>CC-BY-NC-SA - License</b></p>
-<br />
 <table class="tg" width=100%>
   <tr>
-    <td class="tg-0lax"><img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png"></th>
+    <td class="tg-0lax"><img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png"></td>
     <td align="right" class="tg-0lax">
                 <h1>OGUI - GDrive Ocalmfuse GUI</h1>
-                <p align="right">Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br><b>CC-BY-NC-SA - License</b></p>
-          </th>
+                <p align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br><b>CC-BY-NC-SA - License</b></p>
+    </td>
   </tr>
 </table>
 
