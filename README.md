@@ -1,12 +1,10 @@
-
-![ogui icon](https://github.com/jernesten/ogui/blob/master/images/ogui.png "OGUI icon") 
 <div>
- <div style="float:left" >
-  <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
- </div>
- <div style="float:right" >
-  OGUI - Google Drive Ocalmfuse Graphical User Interface
- </div>
+    <div style="float:left" >
+        <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
+    </div>
+    <div style="float:right" >
+        OGUI - Google Drive Ocalmfuse Graphical User Interface
+    </div>
 </div>
   
 
