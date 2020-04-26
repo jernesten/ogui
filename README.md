@@ -22,9 +22,9 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
  OGUI is just a GUI for google-drive-ocamlfuse.
  So in order to be able to mount your google drive account you need to install first the Astrada's program.
  
-### Debian, Ubuntu systems and derivates
+### :pushpin: Debian, Ubuntu systems and derivates
 
-#### The easy way
+#### :small_blue_diamond: The easy way
 
 - Clone or [download](https://github.com/jernesten/ogui-installer/archive/master.zip)
 ```
@@ -39,7 +39,7 @@ sh ogui-installer
 ```
 [More information.](https://github.com/jernesten/ogui-installer)
 
-#### The less easy way
+#### :small_blue_diamond: The less easy way
 
 For ubuntu systems and derivates Astrada has uploaded .deb packages into his PPA. In order to install it, use the commands below:
 ```
@@ -88,7 +88,7 @@ chmod +x ~/ogui/ogui.desktop
 cp ~/ogui/ogui.desktop ~/.local/share/applications/ogui.desktop
 ```
 
-### For other systems or other installation options
+### :pushpin: For other systems or other installation options
 
 #### Installing gdrive-ocalmfuse
 For installing in other systems, please go to [Astrada's ocamlfuse github](https://github.com/astrada/google-drive-ocamlfuse) and follow instructions
