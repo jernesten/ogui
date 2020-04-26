@@ -1,6 +1,6 @@
 <p>
         <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
-        <h1>OGUI - Google Drive Ocalmfuse Graphical User Interface</h1>
+        <h1>OGUI - GDrive Ocalmfuse GUI</h1>
 </p>
   
 
