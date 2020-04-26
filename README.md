@@ -1,9 +1,15 @@
 <p>
         <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" align="left">
-        <h1 align="right" style="padding-top:-25px">OGUI - GDrive Ocalmfuse GUI</h1>        
+        <h1 align="right">OGUI - GDrive Ocalmfuse GUI</h1>        
 </p>
 <p align="right" >Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta. <br /><b>CC-BY-NC-SA - License</b></p>
 <br />
+<table class="tg">
+  <tr>
+    <th class="tg-0lax"><img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png"></th>
+    <th class="tg-0lax"><h1 align="right">OGUI - GDrive Ocalmfuse GUI</h1></th>
+  </tr>
+</table>
 
 OGUI is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
 https://github.com/astrada/google-drive-ocamlfuse
