@@ -1,5 +1,5 @@
 <p>
-        <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
+        <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" style="padding-top:25px" align="left">
         <h1>OGUI - GDrive Ocalmfuse GUI</h1>
 </p>
   
