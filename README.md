@@ -49,13 +49,16 @@ Depending on your Linux distribution you may need to run before
 ```
 sudo apt-get install software-properties-common
 ```
-Clone or download https://github.com/jernesten/ogui
+Clone or [download](https://github.com/jernesten/ogui/archive/master.zip)
 ```
 cd ~/
-sudo apt-get install git python3 python3-tk
 git clone https://github.com/jernesten/ogui
 ```
-Extract if needed and copy the directory in cp -R ~/ogui ~/.local/share
+Install dependencies
+```
+sudo apt-get install git python3 python3-tk
+```
+Extract if needed and copy the extracted folder into ~/.local/share
 ```
 chmod +x ~/ogui/py/ogui
 cp -R ~/ogui ~/.local/share
