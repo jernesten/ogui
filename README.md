@@ -1,7 +1,16 @@
 
-| ![ogui icon](https://github.com/jernesten/ogui/blob/master/images/ogui.png "OGUI icon") | OGUI - Google Drive Ocalmfuse Graphical User Interface |
-|:---:|:---:|
-double Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta.<td colspan=2>
+![ogui icon](https://github.com/jernesten/ogui/blob/master/images/ogui.png "OGUI icon") 
+<div>
+ <div style="float:left" >
+  <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
+ </div>
+ <div style="float:right" >
+  OGUI - Google Drive Ocalmfuse Graphical User Interface
+ </div>
+</div>
+  
+
+double Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta.
 
 **CC-BY-NC-SA - License**
 
