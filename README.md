@@ -7,6 +7,7 @@
     </td>
   </tr>
 </table>
+<br>
 
 OGUI is a small application that serves as a graphical interface to control the Ocalmfuse program write by Astrada and also shared in github.
 https://github.com/astrada/google-drive-ocamlfuse
