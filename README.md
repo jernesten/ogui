@@ -1,11 +1,7 @@
-<div>
-    <div style="float:left" >
+<p>
         <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
-    </div>
-    <div style="float:right" >
         OGUI - Google Drive Ocalmfuse Graphical User Interface
-    </div>
-</div>
+</p>
   
 
 double Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta.
