@@ -12,7 +12,7 @@ The application allows you to manage more than one google drive account, accordi
 
 Sorry if the code is not as fancy as python could allow, but this is my first python app. However I am open to suggestions if someone thinks they know how to improve it.
 
-<p align=center">
+<p align="center">
         <img src="https://github.com/jernesten/ogui/raw/master/images/ogui-sample.png">
 <p/>
 
