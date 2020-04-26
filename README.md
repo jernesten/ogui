@@ -34,7 +34,7 @@ git clone https://github.com/jernesten/ogui-installer
 ```
 sh ogui-installer
 ```
--choose your option in the menu
+- choose your option in the menu
 ```
 1. Only install OGUI, GDrive Ocamlfuse is already installed
 2. Install both OGUI and GDrive Ocamlfuse
