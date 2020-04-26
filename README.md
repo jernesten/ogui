@@ -1,6 +1,6 @@
 <p>
-        <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" style="padding-top:25px" align="left">
-        <h1>OGUI - GDrive Ocalmfuse GUI</h1>
+        <img src="https://github.com/jernesten/ogui/raw/master/images/ogui.png" align="left">
+        <h1 style="padding-top:-25px">OGUI - GDrive Ocalmfuse GUI</h1>
 </p>
   
 
