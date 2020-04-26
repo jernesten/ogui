@@ -61,7 +61,7 @@ cd ~/
 sudo apt-get install git python3 python3-tk
 git clone https://github.com/jernesten/ogui
 ```
-Extract if needed (if you've download a zip) and copy the directory in cp -R ~/ogui ~/.local/share
+Extract if needed and copy the directory in cp -R ~/ogui ~/.local/share
 ```
 chmod +x ~/ogui/py/ogui
 cp -R ~/ogui ~/.local/share
