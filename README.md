@@ -1,10 +1,10 @@
 <p>
         <img src="https://github.com/jernesten/ogui/blob/master/images/ogui.png" />
-        OGUI - Google Drive Ocalmfuse Graphical User Interface
+        <h1>OGUI - Google Drive Ocalmfuse Graphical User Interface</h1>
 </p>
   
 
-double Linux Graphical user interface for GDrive ocamlfuse build in python3 - v. 1.4.21 Beta.
+Linux Graphical User interface for GDrive ocamlfuse made with python3 - v. 1.4.21 Beta.
 
 **CC-BY-NC-SA - License**
 
