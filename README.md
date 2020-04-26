@@ -15,7 +15,7 @@ Sorry if the code is not as fancy as python could allow, but this is my first py
 
 ![ogui sample](https://github.com/jernesten/ogui/blob/master/images/ogui-sample.png "OGUI Image Sample")
 
-## Installation
+## :inbox_tray: Installation
 
  OGUI is just a GUI for google-drive-ocamlfuse.
  So in order to be able to mount your google drive account you need to install first the Astrada's program.
@@ -101,7 +101,7 @@ For other installation options, please refer to his [wiki](https://github.com/as
 The same as for Debian/Ubuntu systems.
 Even the script should be useful.
 
-## How to use
+## :wrench: How to use
 
 **Buttons:**
 
