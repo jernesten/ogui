@@ -2,12 +2,24 @@
 import tkinter as tk
 from tkinter import Menu, messagebox, PhotoImage, Entry, Frame, Label, Button, Toplevel
 from functools import partial
+from pathlib import Path
 import json, os, re
 
 root = tk.Tk()
 root.title("OGUI")
 root.resizable(False, True)
 root.option_add("*Dialog.msg.font","Monospace 10")
+
+#Path and files
+data_folder = Path.home() / "PythonProjects/OGUI"
+
+accountsdb = data_folder / "json/accounts.json"
+
+main_icon = data_folder / "images/ogui.png"
+mount_icon = data_folder / "images/mount.png"
+unmount_icon = data_folder / "images/unmount.png"
+delete_icon = data_folder / "images/delete.png"
+edit_icon = data_folder / "images/edit.png"
 
 #colorsVars
 color1 = "#222"
@@ -20,7 +32,7 @@ color6 = "#fff"
 #infoVars
 appname  = "OGUI Manager"
 longname = "Ocamlfuse-Google-Drive GUI Manager"
-version  = "version 1.4.213"
+version  = "version 1.3.20"
 author   = "https://github.com/jernesten"
 web      = "https://github.com/jernesten/OGUI"
 
@@ -100,14 +112,15 @@ def openForm(itemID):
                 errorValidate2()
 
         def addValidated():
-            with open("json/accounts.json") as jsonfile:
+            with open(accountsdb) as jsonfile:
                 data = json.load(jsonfile)
 
+            #aquí tiene que ir un if
             if itemID=="fk-id":
                 listdata=data["accounts"] #make accounts a list to be able to append
                 listdata.append({'name': str(e1), 'mountpoint':  str(e2)})
             
-                with open("json/accounts.json","w") as jsonfile:
+                with open(accountsdb,"w") as jsonfile:
                     data = json.dump(data, jsonfile, indent=4)
             else:            
                 oldName=data["accounts"][int(itemID)]["name"]
@@ -125,7 +138,7 @@ def openForm(itemID):
                 data["accounts"][int(itemID)]["name"]=newName
                 data["accounts"][int(itemID)]["mountpoint"]=newMountpoint
                 
-                with open("json/accounts.json","w") as jsonfile:
+                with open(accountsdb,"w") as jsonfile:
                     data = json.dump(data, jsonfile, indent=4)
 
             formulario.destroy()
@@ -166,7 +179,7 @@ def openForm(itemID):
 def loadData():
     cargarApp()
 
-    with open("json/accounts.json") as jsonfile:
+    with open(accountsdb) as jsonfile:
         data = json.load(jsonfile)
 
     for account in data["accounts"]:
@@ -204,25 +217,27 @@ def loadData():
         
 #actionButtons functions
 def mountAction(nombre, montaje):
-    os.system("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
+    #os.system("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
+    print("google-drive-ocamlfuse -label " + nombre + " " + montaje + "")
 
 def unmountAction(montaje):
-    os.system("fusermount -u " + montaje + "")
+    #os.system("fusermount -u " + montaje + "")
+    print("fusermount -u " + montaje + "")
 
 def borrarAction(itemID):
-    with open("json/accounts.json") as jsonfile:
+    with open(accountsdb) as jsonfile:
         data = json.load(jsonfile)
     
     value = messagebox.askquestion("Warning! - Deleting Account","You're about to delete the selected account.\n\nAre you sure you want to do it?")
     if value =="yes":
         del(data["accounts"][int(itemID)])
-        with open("json/accounts.json","w") as jsonfile:
+        with open(accountsdb,"w") as jsonfile:
             data = json.dump(data, jsonfile, indent=4)            
     loadData()
 
 ### -----DRAW THE INTERFACE FRAME----- ###
 #Add window icon)
-icon = PhotoImage(file="images/ogui.png")
+icon = PhotoImage(file= main_icon)
 root.tk.call("wm", "iconphoto", root._w, icon)
 
 #Add menu bar
@@ -264,10 +279,10 @@ instructions.place(x=100, y=5, width="350")
 accountsframe=Frame(miframe)
 
 #ICONS
-iconmount   = PhotoImage(file = "images/mount.png")
-iconunmount = PhotoImage(file = "images/unmount.png")
-iconedit    = PhotoImage(file = "images/edit.png")
-icondelete  = PhotoImage(file = "images/delete.png")
+iconmount   = PhotoImage(file = mount_icon)
+iconunmount = PhotoImage(file = unmount_icon)
+iconedit    = PhotoImage(file = edit_icon)
+icondelete  = PhotoImage(file = delete_icon)
 ### \\-----DRAW THE INTERFACE FRAME----- ###
 
 loadData()
