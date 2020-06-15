@@ -83,7 +83,6 @@ GenericName=ogui
 Comment=GUI for gdrive ocamlfuse
 Categories=Network;
 Exec=/home/yourusername/.local/share/ogui/py/ogui
-Path=/home/yourusername/.local/share/ogui
 Terminal=false
 ```
 Move or copy de desktop file into ~/.local/share/applications directory to have the ogui option in your applications menu (this action is useless for openbox menu)
