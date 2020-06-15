@@ -55,14 +55,20 @@ Depending on your Linux distribution you may need to run before
 ```
 sudo apt-get install software-properties-common
 ```
+Dependencies for ogui
+- git
+- python3 (python3.6 at least)
+- python3-tk
+
+Install dependencies
+```
+sudo apt-get install git python3 python3-tk
+```
+
 Clone or [download](https://github.com/jernesten/ogui/archive/master.zip)
 ```
 cd ~/
 git clone https://github.com/jernesten/ogui
-```
-Install dependencies
-```
-sudo apt-get install git python3 python3-tk
 ```
 Extract if needed and copy the extracted folder into ~/.local/share
 ```
