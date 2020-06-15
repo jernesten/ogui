@@ -11,7 +11,7 @@ root.resizable(False, True)
 root.option_add("*Dialog.msg.font","Monospace 10")
 
 #Path and files
-data_folder = Path.home() / "PythonProjects/OGUI"
+data_folder = Path.home() / ".local/share/ogui"
 
 accountsdb = data_folder / "json/accounts.json"
 
